@@ -29,7 +29,6 @@ primary_region = 'fra'
   [[services.ports]]
     port = 443
     handlers = ["tls", "http"]
-
 [mounts]
   source = "jellyfin_data"
   destination = "/config"
