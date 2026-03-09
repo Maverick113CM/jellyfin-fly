@@ -1,6 +1,9 @@
 app = 'jellyfin-manuel'
 primary_region = 'fra'
 
+[processes]
+  app = "/usr/lib/jellyfin/bin/jellyfin --datadir /config/data --cachedir /config/cache --ffmpeg /usr/lib/jellyfin-ffmpeg/ffmpeg"
+
 [build]
 
 [[vm]]
@@ -29,6 +32,7 @@ primary_region = 'fra'
   [[services.ports]]
     port = 443
     handlers = ["tls", "http"]
+
 [mounts]
   source = "jellyfin_data"
   destination = "/config"
