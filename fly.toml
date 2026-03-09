@@ -1,0 +1,16 @@
+app = "jellyfin-manuel"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[[services]]
+  internal_port = 8096
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
