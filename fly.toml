@@ -19,8 +19,7 @@ primary_region = 'fra'
     hard_limit = 100
     soft_limit = 80
 
-  # Health-Checks deaktivieren (wichtig!)
-  [services.http_checks]
+  [[services.http_checks]]
     interval = "0s"
 
   [[services.ports]]
