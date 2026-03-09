@@ -14,6 +14,14 @@ primary_region = 'fra'
   protocol = "tcp"
   processes = ["app"]
 
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 100
+    soft_limit = 80
+
+  [services.http_checks]
+    interval = "0s"
+
   [[services.ports]]
     port = 80
     handlers = ["http"]
