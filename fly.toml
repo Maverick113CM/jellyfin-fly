@@ -9,7 +9,6 @@ primary_region = 'fra'
 [build]
 
 [http_service]
-  [http_service]
   internal_port = 8096
   force_https = true
   auto_stop_machines = "stop"
