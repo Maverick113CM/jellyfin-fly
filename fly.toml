@@ -19,7 +19,7 @@ primary_region = 'fra'
     hard_limit = 100
     soft_limit = 80
 
-  [[services.http_checks]]
+  [[services.tcp_checks]]
     interval = "0s"
 
   [[services.ports]]
