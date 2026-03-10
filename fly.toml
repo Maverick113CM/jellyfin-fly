@@ -17,7 +17,7 @@ primary_region = "fra"
   processes = ["app"]
 
   [[services.tcp_checks]]
-    interval = "0s"
+    interval = "1s"
 
   [[services.ports]]
     port = 80
