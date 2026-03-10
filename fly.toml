@@ -1,14 +1,16 @@
-app = 'jellyfin-manuel'
-primary_region = 'fra'
+app = "jellyfin-manuel"
+primary_region = "fra"
 
 [processes]
-  app = "/usr/lib/jellyfin/bin/jellyfin --datadir /config/data --cachedir /config/cache --ffmpeg /usr/lib/jellyfin-ffmpeg/ffmpeg"--datadir /config/data --cachedir /config/cache --ffmpeg /usr/lib/jellyfin-ffmpeg/ffmpeg"
+  app = "/usr/lib/jellyfin/bin/jellyfin \
+         --datadir /config/data \
+         --cachedir /config/cache \
+         --ffmpeg /usr/lib/jellyfin-ffmpeg/ffmpeg"
 
 [build]
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
+  cpu_kind = "shared"
   cpus = 1
   memory_mb = 256
 
@@ -35,4 +37,5 @@ primary_region = 'fra'
 
 [mounts]
   source = "jellyfin_data"
+  destination = "/config"  source = "jellyfin_data"
   destination = "/config"
